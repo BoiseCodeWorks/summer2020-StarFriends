@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>star-friends</title>
 </head>
 
 <body>
+    <button class="btn btn-danger" onclick="app.charactersController.previous()">Previous</button>
+    <button class="btn btn-success" onclick="app.charactersController.next()">Next</button>
+    <div id="characters"></div>
 
-    <h1>hello star-friends</h1>
+    <div id="active-character">
 
+    </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 

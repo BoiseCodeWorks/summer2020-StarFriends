@@ -1,21 +1,27 @@
 import Value from "./Models/Value.js";
+import Character from "./Models/Character.js";
 
 /**
  * Data is stored in the state to be accessable throughout the application
  * NOTE: do not set this value directly use the "commit" action
  */
 let _state = {
-  activeValue: new Value({ title: "Value" }),
+  page: 1,
+  /** @type {Character} */
+  activeCharacter: null,
   /** @type {Value[]} */
-  values: []
+  values: [],
+  /** @type {Character[]} */
+  characters: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  activeValue: [],
-  values: [] // [ _draw(){...} ]
+  activeCharacter: [],
+  values: [], // [ _draw(){...} ]
+  characters: []
 };
 
 //NOTE You should not need to change the code from this point down
